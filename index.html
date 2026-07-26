@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>영재 추천 K-STAR 통합 랭킹 센터 | 네이버 & 구글 실시간 연동</title>
+  <meta name="description" content="영재가 추천하는 2026 최신 아이돌, 배우, 치어리더 순위 및 연도별/월별 신인배우 브랜드평판 네이버 & 구글 실시간 연동 데이터센터">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="logo-container">
+      <div class="logo-icon">Y</div>
+      <div class="logo-text">
+        <h1>영재's K-STAR RANKING</h1>
+        <span>네이버 & 구글 빅데이터 실시간 연동 센터</span>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <div class="portal-live-badge">
+        <span class="pulse-dot"></span>
+        <span>NAVER & GOOGLE LIVE CONNECTED (2026.07)</span>
+      </div>
+      <button class="btn btn-naver" onclick="openNaverSearch('2026 아이돌 배우 브랜드평판 순위')">
+        <span>🟢</span> 네이버 연동
+      </button>
+      <button class="btn btn-google" onclick="openGoogleSearch('2026 아이돌 배우 브랜드평판 순위')">
+        <span>🔍</span> 구글 연동
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Hero Banner Section -->
+    <section class="hero-card">
+      <img src="hero.jpg" alt="K-Star Ranking Banner" class="hero-banner-img" id="heroImage">
+      <div class="hero-overlay">
+        <div class="hero-tag">
+          <span>✨</span> YOUNGJAE CURATED K-ENTERTAINMENT INDEX
+        </div>
+        <h2 class="hero-title">
+          영재가 추천하는 아이돌 · 배우 · 치어리더 <br>
+          <span style="color: var(--naver-green);">네이버 & 구글 실시간 연동 최신 순위</span>
+        </h2>
+        <p class="hero-subtitle">
+          네이버 연예 뉴스, 구글 실시간 트렌드 지수, 한국기업평판연구소 빅데이터, 영재의 프리미엄 인사이트를 결합한 종합 랭킹 플랫폼입니다.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">120+</span>
+            <span class="stat-label">집계 스타 수</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">2026.07</span>
+            <span class="stat-label">최신 업데이트</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" style="color: var(--accent-pink);">99.8%</span>
+            <span class="stat-label">영재 추천 신뢰도</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Tabs Navigation -->
+    <nav class="tabs-wrapper" aria-label="카테고리 탭">
+      <button class="tab-btn active" data-tab="youngjae">
+        <span>⭐</span> 영재's Special Pick
+      </button>
+      <button class="tab-btn" data-tab="idol">
+        <span>🎤</span> 아이돌 최신 순위
+      </button>
+      <button class="tab-btn" data-tab="actor">
+        <span>🎬</span> 배우 최신 순위
+      </button>
+      <button class="tab-btn" data-tab="cheerleader">
+        <span>📣</span> 치어리더 최신 순위
+      </button>
+      <button class="tab-btn" data-tab="rookie">
+        <span>🌟</span> 연도별/월별 신인배우
+      </button>
+      <button class="tab-btn" data-tab="searchEngine">
+        <span>🟢</span> 네이버 & 구글 실시간 연동 Engine
+      </button>
+    </nav>
+
+    <!-- Controls Bar (Search & Filter) -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="스타 이름, 그룹명, 드라마 제목 검색 (예: 허남준, 권희원, 방탄소년단)...">
+      </div>
+
+      <div class="filter-group">
+        <select id="sortSelect" class="select-input">
+          <option value="rank">순위순 (Default)</option>
+          <option value="brandIndex">브랜드평판 지수 높은순</option>
+        </select>
+        <button class="btn btn-glass" onclick="renderTabContent()">
+          <span>🔄</span> 새로고침
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <section id="contentContainer">
+      <!-- Dynamic Javascript Content Injected Here -->
+    </section>
+
+  </main>
+
+  <!-- Modal Popup for Star Details -->
+  <div class="modal-backdrop" id="detailModal" onclick="if(event.target === this) closeModal()">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalBody">
+        <!-- Injected via Javascript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 영재 추천 K-STAR 통합 랭킹 센터. NAVER & Google Dual Reference Engine Enabled.</p>
+    <p style="margin-top: 5px;">자료출처: 네이버 연예 뉴스, 구글 검색 빅데이터 & 한국기업평판연구소 브랜드평판 리포트</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
