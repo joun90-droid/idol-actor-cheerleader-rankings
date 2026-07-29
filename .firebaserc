@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vaulted-acolyte-387217"
+  },
+  "targets": {
+    "vaulted-acolyte-387217": {
+      "hosting": {
+        "kstar": [
+          "jeonyoungjae-kstar"
+        ]
+      }
+    }
+  }
+}

@@ -733,15 +733,69 @@ footer {
 
 footer a {
   color: var(--naver-green);
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+footer p + p {
+  margin-top: 6px;
+}
+
+/* Ad Slots */
+.ad-slot {
+  margin: 1.5rem 0;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ad-slot-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.ad-slot .adsbygoogle {
+  width: 100%;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.2rem;
+  }
+  .star-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0.8rem 1rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+  .nav-actions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .portal-live-badge {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .nav-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .hero-banner-img {
+    height: 220px;
   }
   .hero-overlay {
     padding: 1.5rem;
@@ -749,7 +803,65 @@ footer a {
   .hero-title {
     font-size: 1.6rem;
   }
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .tabs-wrapper {
+    gap: 8px;
+  }
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  .controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-group {
+    justify-content: space-between;
+  }
   .star-grid {
     grid-template-columns: 1fr;
+  }
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .action-btns {
+    justify-content: stretch;
+  }
+  .action-btns .btn {
+    flex: 1;
+    justify-content: center;
+  }
+  .selector-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text h1 {
+    font-size: 1.1rem;
+  }
+  .logo-text span {
+    font-size: 0.65rem;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+  .hero-stats {
+    gap: 0.8rem;
+  }
+  .stat-value {
+    font-size: 1.2rem;
+  }
+  .modal-container {
+    padding: 1.4rem;
   }
 }

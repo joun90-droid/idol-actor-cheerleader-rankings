@@ -4,3 +4,4 @@ __pycache__/
 *.exe
 cloudflared.exe
 .DS_Store
+.firebase/
