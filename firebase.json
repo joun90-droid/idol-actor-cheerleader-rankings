@@ -6,23 +6,20 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "*.md"
+      "*.md",
+      "_*",
+      "*.py"
     ],
     "headers": [
       {
-        "source": "**/*.html",
+        "source": "/robots.txt",
         "headers": [
-          { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
+          { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+          { "key": "Cache-Control", "value": "public, max-age=300" }
         ]
       },
       {
-        "source": "**/*.js",
-        "headers": [
-          { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
-        ]
-      },
-      {
-        "source": "**/*.css",
+        "source": "**/*.@(html|js|css)",
         "headers": [
           { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
         ]
